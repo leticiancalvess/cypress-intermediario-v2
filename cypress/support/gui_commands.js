@@ -1,26 +1,11 @@
 
-Cypress.Commands.add('login', (
-    user = Cypress.env('user_name'),
-    password = Cypress.env('user_password'),
-  ) => {
-    const login = () => {
-      cy.visit('/users/sign_in')
-  
-      cy.get("[data-qa-selector='login_field']").type(user)
-      cy.get("[data-qa-selector='password_field']").type(password, { log: false })
-      cy.get("[data-qa-selector='sign_in_button']").click()
-      cy.get('.qa-user-avatar').should('be.visible')
-    }
-  
-    login()
-  })
+
 
 Cypress.Commands.add('logout', () => {
-    cy.get('.header-user-dropdown-toggle').click();
-    cy.get('.sign-out-link').click();
-    cy.url().should('be.equal', `${Cypress.config('baseUrl')}/users/sign_in`)
+  cy.get('.qa-user-avatar').click()
+  cy.contains('Sign out').click()
 
-})
+}),
 
 Cypress.Commands.add('gui_createProject', project => {
   cy.visit('/projects/new')
@@ -29,4 +14,36 @@ Cypress.Commands.add('gui_createProject', project => {
   cy.get('#project_description').type(project.description)
   cy.get('.qa-initialize-with-readme-checkbox').check()
   cy.contains('Create project').click()
+}),
+
+Cypress.Commands.add('login', (
+  user = Cypress.env('user_name'),
+  password = Cypress.env('user_password'),
+  { cacheSession = true } = {},
+) => {
+  const login = () => {
+    cy.visit('/users/sign_in')
+
+    cy.get("[data-qa-selector='login_field']").type(user)
+    cy.get("[data-qa-selector='password_field']").type(password, { log: false })
+    cy.get("[data-qa-selector='sign_in_button']").click()
+  }
+
+  const validate = () => {
+    cy.visit('/')
+    cy.location('pathname', { timeout: 1000 })
+      .should('not.eq', '/users/sign_in')
+  }
+
+  const options = {
+    cacheAcrossSpecs: true,
+    validate,
+  }
+
+  if (cacheSession) {
+    cy.session(user, login, options)
+  } else {
+    login()
+  }
 })
+

@@ -31,6 +31,7 @@ Cypress.Commands.add('login', (
 }),
 
 Cypress.Commands.add('logout', () => {
+  cy.visit('/')
   cy.get('.qa-user-avatar').click()
   cy.contains('Sign out').click()
 
@@ -43,4 +44,13 @@ Cypress.Commands.add('gui_createProject', project => {
   cy.get('#project_description').type(project.description)
   cy.get('.qa-initialize-with-readme-checkbox').check()
   cy.contains('Create project').click()
+}),
+
+
+Cypress.Commands.add('gui_createIssue', issue => {
+  cy.visit(`/${Cypress.env('user_name')}/${issue.project.name}/issues/new`)
+
+  cy.get('.qa-issuable-form-title').type(issue.title)
+  cy.get('.qa-issuable-form-description').type(issue.description)
+  cy.contains('Submit issue').click()
 })

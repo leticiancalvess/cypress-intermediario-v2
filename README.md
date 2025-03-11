@@ -2,11 +2,11 @@
 
 👋 Seja bem-vinda(o)!
 
-É muito bom tê-la(o) aqui. Tenho certeza que você vai adorar este curso. ❤️
+
 
 ## O que você vai aprender
 
-Durante o curso de testes automatizados com Cypress (intermediário) você vai aprender:
+Curso desenvolvido para adquirir mais conhecimentos em:
 
 - Como configurar o ambiente local de desenvolvimento
 - Como instalar e configurar o Cypress
@@ -25,10 +25,4 @@ Durante o curso de testes automatizados com Cypress (intermediário) você vai a
 - Como executar comandos à nível de sistema operacional
 - E como testar a leitura de arquivos
 
-## Vamos começar?
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
-
-___
-
-Este é mais um curso da [**Escola Talking About Testing**](https://udemy.com/user/walmyr).

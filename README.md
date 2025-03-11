@@ -3,7 +3,7 @@
 👋 Welcome!
 
 
-# This course is designed to help you acquire more knowledge in:
+## This course is designed to help you acquire more knowledge in:
 
 - How to set up a local development environment
 - How to install and configure Cypress

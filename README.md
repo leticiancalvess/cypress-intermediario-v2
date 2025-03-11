@@ -1,28 +1,25 @@
-# Testes automatizados com Cypress - Intermediário
+Automated Testing with Cypress - Intermediate
 
-👋 Seja bem-vinda(o)!
+👋 Welcome!
 
+What You Will Learn
+This course is designed to help you acquire more knowledge in:
 
-
-## O que você vai aprender
-
-Curso desenvolvido para adquirir mais conhecimentos em:
-
-- Como configurar o ambiente local de desenvolvimento
-- Como instalar e configurar o Cypress
-- Como criar testes automatizados de interface gráfica de usuário
-- Como criar testes automatizados de API (com _feedback_ visual no navegador)
-- Como testar APIs que necessitam um _token_ de acesso
-- Como criar testes otimizados e direto-ao-ponto
-- Como salvar a sessão do usuário no navegador para posterior restauração
-- Como validar se a sessão do usuário ainda é válida e como lidar com isso quando a mesma é invalidada
-- Como fazer a limpeza e criação da massa de dados antes do teste começar
-- Como proteger dados sensíveis, tais como senhas e _tokens_ de acesso
-- Como organizar os testes e comandos customizados em diferentes "camadas" (_API, CLI, GUI_)
-- Como estruturar os testes pensando em pré-condições, ações e resultados esperados
-- Como gerar dados aleatórios para uso nos testes automatizados
-- Como habilitar funcionalidades experimentais do Cypress
-- Como executar comandos à nível de sistema operacional
-- E como testar a leitura de arquivos
+How to set up a local development environment
+How to install and configure Cypress
+How to create automated GUI (Graphical User Interface) tests
+How to create automated API tests (with visual feedback in the browser)
+How to test APIs that require an access token
+How to create optimized and to-the-point tests
+How to save the user session in the browser for later restoration
+How to validate if the user session is still valid and how to handle it when the session is invalidated
+How to clean up and create test data before the test begins
+How to protect sensitive data, such as passwords and access tokens
+How to organize tests and custom commands into different "layers" (API, CLI, GUI)
+How to structure tests thinking in terms of preconditions, actions, and expected results
+How to generate random data for use in automated tests
+How to enable experimental features in Cypress
+How to execute commands at the operating system level
+And how to test file reading
 
 
